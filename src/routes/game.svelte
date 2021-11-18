@@ -48,7 +48,7 @@
 </svelte:head>
 
 <main>
-	<h1>Let me Axe you some questions</h1>
+	<h1 class="text-6xl text-red-500">Let me Axe you some questions</h1>
 
 	<div class="settings">
 		<label>
@@ -77,18 +77,18 @@
 			<div>
 				<button type="submit">Next Round</button>
 			</div>
-			<div class="flex justify-between">
+			<div class="grid col-span-1 md:col-span-10">
 				{#key numberOfRounds}
 					{#key forceReRender}
-						<div>
+						<div class="col-span-10 md:col-span-4">
 							<Target playerName={player1Name} hiddenFieldName="1" />
 						</div>
 
-						<div class="order-first sm:order-none">
+						<div class="order-first md:order-none col-span-10 md:col-span-2">
 							<ScoreBoard player1Score={$player1Score} {player2Score} {rounds} />
 						</div>
 
-						<div>
+						<div class="col-span-10 md:col-span-4">
 							<Target playerName={player2Name} hiddenFieldName="2" />
 						</div>
 					{/key}

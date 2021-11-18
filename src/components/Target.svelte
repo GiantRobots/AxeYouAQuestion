@@ -81,10 +81,8 @@
 	.target-container {
 		position: relative;
 		text-align: center;
-		margin: 0 auto;
 		/* Make a square that takes x% of the screen */
-		width: 40vw;
-		height: 40vw;
+		aspect-ratio: 1/ 1;
 	}
 	.target {
 		border-radius: 100%;
